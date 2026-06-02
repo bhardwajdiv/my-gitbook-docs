@@ -1,11 +1,20 @@
-# How to Structure GitHub for GitBook
+# GitHub File Organization
 
-To enable GitBook to read and parse your repository properly, you must follow a clean, specific file organization pattern. GitBook relies on standard Markdown files (`.md`) and a map file to generate the interface.
+To enable the GitBook parsing engine to read, interpret, and visually render your repository correctly, you must adhere to a strict file organization hierarchy. GitBook treats your repository as a systematic directory tree.
 
-## Required Root Files
-Every GitBook-compatible repository requires two primary files at the root level:
-* **`README.md`**: Serves as the landing homepage of your documentation space.
-* **`SUMMARY.md`**: Acts as the exact architecture map for your left-hand sidebar navigation.
+## Required Root-Level Core Files
+Your repository must contain two essential configuration files located strictly at the absolute root directory path (`./`):
 
-## Directory Layout
-It is highly recommended to group related files into subdirectories. For example, keeping architecture rules in a `repository-structure/` folder keeps your GitHub cleaner than throwing all files into the root directory.
+### 1. The Homepage (`README.md`)
+The root `README.md` file serves as the absolute entry point and landing page of your published documentation space. If this file is missing or misplaced inside a sub-folder, the GitBook builder will fail to compile the home view and throw a deployment error.
+
+### 2. The Architecture Map (`SUMMARY.md`)
+The `SUMMARY.md` file functions as the blueprint file for your site navigation. Without this file, GitBook cannot determine your site tree, causing it to display a completely flat or unindexed list of loose files.
+
+## Designing a Scalable Folder Structure
+Throwing all `.md` files into the root directory creates a messy repository that is hard to maintain. Instead, isolate related content domains into functional, lower-case subdirectories.
+
+### Recommended Production Blueprint:
+* `repository-structure/`: Houses all structural tracking rules.
+* `navigation/`: Dedicated to indexing, mapping, and user-experience guidelines.
+* `best-practices/`: Stores syntax styling, table schemas, and deployment assets.
