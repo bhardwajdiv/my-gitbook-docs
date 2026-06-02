@@ -12,7 +12,7 @@
 * [Troubleshooting GitHub Sync](github-integration/troubleshooting.md)
 
 ## 📦 Repository Structure
-* [Folder Organization](repository-structure/folder-organization.md)
+* [Folder Organization](repository-structure/folder-organisation.md)
 * [File Naming Conventions](repository-structure/file-naming.md)
 * [Navigation Hierarchy](repository-structure/navigation-hierarchy.md)
 
