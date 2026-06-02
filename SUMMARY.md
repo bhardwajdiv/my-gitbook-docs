@@ -23,3 +23,4 @@
 
 ## 💡 Live Examples
 * [Complete Repository Example](examples/repository-example.md)
+* [Technical Glossary Reference](examples/glossary.md)
